@@ -14,11 +14,11 @@ There are two ways of how to use the DC.
 * Download DC_v[xy]_installer.exe.
 * Execute DC_v[xy]_installer.exe.
 
-In case the MATLAB Runtime is not downloaded and installed automatically:
+In case the MATLAB runtime is not downloaded and installed automatically:
 
-* Check in ChangeLog.txt for the MATLAB Runtime version
-* Download the MATLAB Runtime at https://www.mathworks.com/products/compiler/matlab-runtime.html
-* Install the runtime
+* Check in ChangeLog.txt for the MATLAB runtime version.
+* Download the appropriate MATLAB runtime at https://www.mathworks.com/products/compiler/matlab-runtime.html
+* Install the runtime.
 * Execute DC_v[xy]_installer.exe.
 
 ### Use the code in MATLAB (MATLAB and Curve Fitting Toolbox required)
