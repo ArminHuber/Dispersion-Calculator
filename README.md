@@ -47,9 +47,9 @@ For the theoretical background, the following literature is recommended.
 
 * S. I. Rokhlin and L. Wang, Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method, J. Acoust. Soc. Am., vol. 112, pp. 822-834, 2002.
 * L. Wang and S. I. Rokhlin, Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media, Ultrasonics, vol. 39, pp. 413-424, 2001.
-* V. G. A. Kamal and V. Giurgiutiu, Stiffness Transfer Matrix Method (STMM) for Stable Dispersion Curves Solution in Anisotropic Composites, Proc. SPIE,
-2014.
+* V. G. A. Kamal and V. Giurgiutiu, Stiffness Transfer Matrix Method (STMM) for Stable Dispersion Curves Solution in Anisotropic Composites, Proc. SPIE, 2014.
 * A. M. A. Huber and M. G. R. Sause, Classification of solutions for guided waves inanisotropic composites with large numbers of layers, J. Acoust. Soc. Am., vol. 144, pp. 3236-3251, 2018.
 
 ### PhD thesis
 
+* A. M. A. Huber, Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection. 2020. https://elib.dlr.de/139819
