@@ -39,6 +39,17 @@ For the theoretical background, the following literature is recommended.
 
 ### Books
 
-* J. L. Rose, Ultrasonc Waves in Solid Media. Cambridge University Press, Cambridge 1999.
+* J. L. Rose, Ultrasonic Waves in Solid Media. Cambridge University Press, Cambridge 1999.
 * A. H. Nayfeh, Wave Propagation in Layered Anisotropic Media with Applications to Composites. North-Holland, Amsterdam, 1995.
 * S. I. Rokhlin, D. E. Chimenti and P. B. Nagy, Physical Ultrasonics of Composites. Oxford University Press, Oxford, 2011.
+
+### Journal articles
+
+* S. I. Rokhlin and L. Wang, Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method, J. Acoust. Soc. Am., vol. 112, pp. 822-834, 2002.
+* L. Wang and S. I. Rokhlin, Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media, Ultrasonics, vol. 39, pp. 413-424, 2001.
+* V. G. A. Kamal and V. Giurgiutiu, Stiffness Transfer Matrix Method (STMM) for Stable Dispersion Curves Solution in Anisotropic Composites, Proc. SPIE,
+2014.
+* A. M. A. Huber and M. G. R. Sause, Classification of solutions for guided waves inanisotropic composites with large numbers of layers, J. Acoust. Soc. Am., vol. 144, pp. 3236-3251, 2018.
+
+### PhD thesis
+
