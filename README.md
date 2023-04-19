@@ -16,7 +16,7 @@ There are two ways of how to use DC.
 
 In case the MATLAB runtime is not downloaded and installed automatically:
 
-* Check in ChangeLog.txt for the MATLAB runtime version.
+* Check ChangeLog.txt for the MATLAB runtime version.
 * Download the appropriate MATLAB runtime at https://www.mathworks.com/products/compiler/matlab-runtime.html
 * Install the runtime.
 * Execute DC_v[xy]_installer.exe.
