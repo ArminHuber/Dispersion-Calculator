@@ -9,7 +9,7 @@ The MATLAB-based Dispersion Calculator (DC) is an interactive software for calcu
 
 There are two ways of how to use DC.
 
-### Installing the DC as a stand-alone application (no MATLAB required)
+### Installing DC as a stand-alone application (no MATLAB required)
 
 * Download DC_v[xy]_installer.exe.
 * Execute DC_v[xy]_installer.exe.
