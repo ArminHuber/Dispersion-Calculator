@@ -11,15 +11,15 @@ There are two ways of how to use DC.
 
 ### Installing DC as a stand-alone application (no MATLAB required)
 
-* Download DC_v[xy]_installer.exe.
-* Execute DC_v[xy]_installer.exe.
+* Download DC_vXY_installer.exe.
+* Execute DC_vXY_installer.exe.
 
 In case the MATLAB runtime is not downloaded and installed automatically:
 
 * Check ChangeLog.txt for the MATLAB runtime version.
 * Download the appropriate MATLAB runtime at https://www.mathworks.com/products/compiler/matlab-runtime.html
 * Install the runtime.
-* Execute DC_v[xy]_installer.exe.
+* Execute DC_vXY_installer.exe.
 
 ### Use the code in MATLAB (MATLAB and Curve Fitting Toolbox required)
 * Download the repository as a zip-file (click the green "Code" button, and press "Download ZIP").
