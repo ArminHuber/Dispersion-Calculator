@@ -1,0 +1,6 @@
+DC v2.4 requirements:
+- MATLAB R2022a
+- Curve Fitting Toolbox
+
+Optional:
+- Parallel Computing Toolbox (for enabling multi-core computing)
