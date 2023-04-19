@@ -29,7 +29,7 @@ In case the MATLAB runtime is not downloaded and installed automatically:
 
 ## Author
 
-Dr. Armin Huber, armin.huber[at]dlr.de
+Dr. Armin Huber, armin.huber@dlr.de
 
 ## Version History
 
