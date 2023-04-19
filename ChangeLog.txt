@@ -1,0 +1,409 @@
+DC v2.4 - April 19, 2023
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Improved performance through implementation of distinct dispersion equations for symmetric and antisymmetric Lamb and Scholte waves in the stiffness matrix method; before v2.4, the symmetry of each solution had to be checked during dispersion curve tracing by calculating the displacement u1 at both surfaces:
+    - Faster and more robust dispersion curve tracing of symmetric and antisymmetric Lamb and Scholte modes in the "Anisotropic" tab in all cases (coupled, decoupled, attenuated, nonattenuated)
+    - Faster and more robust dispersion curve tracing of symmetric and antisymmetric modes in the "Polar diagrams" tab
+- Shear horizontal modes in viscoelastic single layers are solved by an analytic dispersion equation in the "Anisotropic" tab, similar as already the case in the "Isotropic" tab; no dispersion curve tracing is necessary anymore
+- Parallel computing of symmetric and antisymmetric Scholte modes in the "Anisotropic" tab when multicore computing is enabled
+- Faster energy velocity calculation for multilayered waveguides in the "Anisotropic" and "Polar diagrams" tabs
+- Significantly more robust initial search for the start of A0 in attenuated cases in the "Isotropic" tab through increasing the number of complex wavenumber samples from 2e4 to 36e4; in case of an unsuccessful search, dispersion curve tracing cannot start; this is far less likely now
+- Refinement on the attenuated dispersion curve tracing algorithm:
+    - More robust tracing of A0/B0, especially when fluid-loading is involved
+    - More robust start of tracing at the cut-off frequencies of the higher order modes
+    - Faster start of tracing of higher order Scholte modes in viscoelastic cases
+    - Shorter and more convenient code for searching border minima in the dispersion equation amplitude
+- The yet missing tracing animation of the high phase velocity part in the "Isotropic" tab when multicore computing was enabled has been added
+- Two help boxes are added to the "Material editor"
+
+Bug fixes:
+- The initial frequency sweep for higher order Scholte modes in the "Anisotropic" tab did not work properly in coupled cases when viscoelastic materials were involved
+- The two spectral amplitude plots in the "Signal simulator" disappeared when "Multi-mode" was activated and the sum of amplitudes was zero; this happened when the out-of-plane signal was calculated, and only SH modes were selected (the out-of-plane displacement of SH modes is zero)
+
+DC v2.3.1 - February 10, 2023
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Dispersion curve tracing at the first frequencies of the fundamental modes S0/B1 and S1/B2 in attenuated cases in the "Anisotropic" tab has been reworked again; the changes made in v2.3 improved the robustness for some cases, but made it worse for others where the tracing failed already at the starting frequencies; the algorithm is now more flexible and robust
+- More robust dispersion curve tracing of the A0/B0 mode in fluid-loaded cases in the "Anisotropic" tab; tracing stopped previously when the damping had dropped to zero; this can happen at low frequencies with dense waveguides; the mode continues now (if the algorithm does not fail) with a sharp rise in the damping, which is the normal behavior of A0/B0 in case of fluid-loading
+
+Bug fixes:
+- Dispersion curves of leaky Lamb waves and Scholte waves were traced incorrectly in the "Anisotropic" tab when the waveguide consisted of multiple layers, and only the lower half-space was filled with a fluid, while the upper half-space was a vacuum; the dispersion equation was incorrect in this case
+- An error occurred in the "Anisotropic" tab when trying to trace SH modes in hybrid layups in viscoelastic cases
+- An error occurred in the "Anisotropic" tab under rare coincidence when trying to calculate a dispersion diagram for an isotropic single layer wherein the longitudinal bulk velocity (vL) was an integer multiple of 10 m/s; this could only happen in the same DC session where the user had created the material in the material editor by entering such a straight number for vL; the bug did not occur after restarting the DC
+- In the "Polar diagrams" tab, an error occurred after the dispersion curve tracing had been completed when any dispersion curve at any propagation angle could not have been traced up to the frequency limit; this error is now caught and reported immediately (if multi-core computing is disabled) so that the user can decrease the frequency limit
+- In the "Dispersion diagrams" panel of the "Anisotropic" tab, the value in the "Y-axis" field was not adjusted in some cases when "Attenuation" was selected in the "Quantity" drop-down menu and the "X-axis mode" field was edited
+- A few GUI elements in the "Signal simulator" were not shifted correctly when the slide bar in the "Isotropic" tab was used
+
+DC v2.3 - January 1, 2023
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Improved performance in the "Anisotropic" tab through optimization in the core equations:
+    - Dispersion curve tracing in attenuated coupled cases is twice as fast
+    - Dispersion curve tracing in attenuated decoupled cases is five to ten percent faster
+    - Dispersion curve tracing in nonattenuated coupled cases is twenty percent faster
+    - Faster are also: search for fundamental modes, search for higher order modes, energy velocity calculation
+- Energy velocity calculation in the "Isotropic" tab is twenty-five percent faster
+- Dispersion curve tracing in the "Polar diagrams" tab is thirty percent faster
+- Calculating 3-D surfaces of phase velocity, group velocity, etc. in the "Bulk waves" tab is twice as fast
+- More robust dispersion curve tracing of the fundamental modes in attenuated cases in the "Anisotropic" tab
+- The phase of the displacement, stress, and strain components can be plotted in addition to the amplitude in the "Through-thickness" panels of the "Isotropic" and "Anisotropic" tabs
+- The raw data of the above phase can be exported in the "Export settings" panels
+- The bulk wave pattern plots in the "Through-thickness" panels of the "Isotropic" and "Anisotropic" tabs have been removed because the correctness of the amplitudes could not be guaranteed
+- In the "Signal simulator", the displacement axis range in the upper signal window can be adjusted by editing the "Y-axis" field
+- The time after which a parallel pool shuts down if idle has been increased from 30 to 180 minutes
+
+Bug fixes:
+- A fatal error occurred after tracing a dispersion diagram wherein a fundamental mode was missing completely
+- Minor bug fixed in the tracing of B0 when different fluids were above and below the plate
+- The "Undistorted" grid plotted in the "Mode shape" panels of the "Isotropic" and "Anisotropic" tabs was displayed incorrectly in some cases when "Half-spaces" was activated
+- Minor bug in the calculation of polar dispersion diagrams fixed
+
+DC v2.2 - October 1, 2022
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Reworked dispersion curve tracing algorithm for non-attenuated cases calculated in the "Isotropic", "Anisotropic", and "Polar Diagrams" tabs to match the stage of development of the tracing algorithm used for attenuated cases, thereby enabling faster and more robust tracing, in particular:
+    - If the dispersion curve tracing gets off a curve, the search will not continue indefinitely anymore but stop after five consecutively missed sample points, and then continue with the next mode
+    - Samples which were missed during the tracing and which are extrapolated to be able to continue the tracing (unless more than 5 were missed consecutively) are refitted after completion of the curve to smooth any discontinuity
+    - The starting sample of higher order dispersion curves is not anymore searched at only a single cut-off frequency but in a range of 50 kHz/mm above the cut-off frequency
+    - If the starting sample of a higher order dispersion curve is not found, the whole dispersion diagram tracing does not terminate anymore but continues with the next mode
+    - The symmetric/antisymmetric character of a mode (in symmetric layups only) is not anymore checked at each bisection iteration but only when fully converged upon the root
+    - Outliers encountered during tracing have a chance to be ignored
+    - The characteristic equations of shear horizontal modes in multilayered anisotropic laminates have been simplified to the minimum; in a single layer, they are solved by an analytical expression similarly as in the isotropic case; no dispersion curve tracing is required in this case anymore
+    - No more message while dispersion curve tracing in the "Isotropic" tab saying that A0 and S0 have been extrapolated above a certain frequency; A0 and S0 are calculated unlimited; same for Scholte modes
+- Faster dispersion curve tracing of higher order modes in attenuated cases without parallel computing
+- In the "Advanced" tab, the panel named "Frequency sweeps to complete dispersion curves at high phase velocity" contains less options for convenience
+- Removed "Homepage" button in the menu bar because it does not work in the runtime R2022a compiled version
+- 35 viscoelastic isotropic materials added, taken from the more than 200 data sets available in: K. Ono. Dynamic viscosity and transverse ultrasonic attenuation of engineering materials. Appl. Sci. 2020, 10, 5265.
+
+Bug fixes:
+- The dispersion curves of shear horizontal modes in viscoelastic isotropic materials were calculated incorrectly in the "Isotropic" tab if the thickness was other than 1 millimeter
+- A Scholte mode dispersion curve at zero phase velocity could be produced at certain conditions in the "Anisotropic" tab
+- Bug in the "Analyze" tool inside attenuation dispersion diagrams fixed
+- The amplitudes given in the bulk wave patterns in the "Anisotropic" tab were incorrect in coupled cases when bulk waves were evanescent
+- Raw data export in the "Signal simulator" did not work in v2.1 in case "Multi-mode" was activated
+
+DC v2.1 - July 28, 2022
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Viscoelasticity can be considered, causing damping of elastic waves; the DC uses the hysteretic damping model (linear increase of attenuation with frequency)
+- In the "Material editor", one can enter complex material parameters to account for viscoelasticity:
+    - In the "Isotropic materials" panel, one can enter:
+        - real and imaginary parts of the engineering constants E and v
+        - real and imaginary parts of the stiffness components C11 and C66
+        - longitudinal and transverse bulk wave velocities and attenuations; attenuations can be entered in Np/lambda, dB/lambda, Np/m at frequency f, or dB/m at frequency f
+    - In the "Anisotropic materials" panel, one can enter:
+        - real and imaginary parts of the engineering constants Ei, Gij, and vij
+        - real and imaginary parts of the stiffness components Cij
+- Signal simulator:
+    - The in-plane displacement (u1) signal can be calculated in addition to the out-of-plane (u3) displacement signal
+    - Available also for attenuated cases
+- The "Unit cell" table in the specimen setup panels of the "Anisotropic", "Polar diagrams", and "Laminate stiffness" tabs has a "Delete" row; by clicking the boxes, the corresponding layers can be deleted in a convenient way
+- Negative propagation times caused by negative energy velocities are ignored in propagation time dispersion diagrams
+- In the through-thickness displacement, stress, strain, energy, and power flow density plots, the fluid-filled half-spaces are indicated by a blue background to help distinguish them from the plate
+- In the mode shape plots, the fluid-filled half-spaces are represented by blue grids
+- Improved automatic setting of the "Samples per layer" in the "Mode shape" panel of the "Anisotropic" tab in case of fluid-loading
+- The bulk wave patterns in the "Through-thickness" panels of the "Isotropic" and "Anisotropic" tabs are available also in case of fluid-loading and viscoelasticity
+- More convenient raw data export by pressing the "*.mat", "*.xlsx", and "*.txt" buttons
+- Dispersion curve raw data can be exported as function of frequency in kHz (default) or MHz or as function of the frequency-thickness product in MHz*mm
+
+Bug fixes:
+- Higher order Lamb modes were not traced in coupled cases in symmetric layups with nonsymmetric fluid-loading
+- The data tip tool in dispersion diagrams did no work in some cases in v2.0
+- Export of dispersion curve raw data failed in the "Isotropic" and "Anisotropic" tabs when a curve contained only a few data points
+
+DC v2.0 - April 7, 2022
+MATLAB Runtime R2022a (9.12)
+----------------------------
+New features:
+- Fluid-loading can be considered in the "Isotropic" and "Anisotropic" tabs:
+    - Fluid-loading allows that energy can leave the plate so that the guided waves are attenuated; the new dispersion diagram is attenuation versus frequency
+    - In the "Isotropic" tab, the plate can be immersed in a fluid so that the half-spaces above and below the plate are covered with one and the same fluid
+    - In the "Anisotropic" tab, different fluids can be assigned to the upper and lower half-spaces, or one of them can be left free (vacuum), while the other is covered with a fluid
+    - Scholte waves can be traced; Scholte waves are guided waves propagating on the interface between a solid and a fluid
+    - In the "Through-thickness profiles" and "Mode shape" panels of the "Isotropic" and "Anisotropic" tabs, you can select to plot the field components also in the half-spaces; you can set how deep the half-spaces shall be shown in multiples of the plate thickness
+- The DC always calculates the energy velocity instead of the group velocity; without damping, the group velocity is the same as the energy velocity, but in case of damping (complex wavenumber) the group velocity (cg = dw/dk) has no physical meaning; the energy velocity is valid in any case
+- Simplified "Mode selection" panel in the "Anisotropic"; it is now the same as the one in the "Isotropic" tab; starting in v2.0, Scholte waves can be selected
+- Simplified bulk wave pattern plots in the "Through-thickness profiles" panels of the "Isotropic" and "Anisotropic" tabs; the previous plot layout showed multiple reflections of the bulk waves but neglected that mode conversion takes place at the boundaries, thereby giving a misleading picture of physics
+- The reflected and transmitted energy coefficients for plane wave incidence on a fluid/solid interface are calculated in the "Bulk waves on interfaces" panel of the "Bulk waves" tab and printed in the output window
+- The above reflection and transmission coefficients can be plotted versus incidence angle by pressing the "Plot R,T" button
+- Faster and more accurate calculation for anisotropic solids in the "Bulk waves on interfaces" panel of the "Bulk waves" tab
+- In the "Fluids" panel of the "Material editor", the "Density" of the fluid is required
+- In the "Advanced" panel, the "Fluid-loading settings" panel allows adjustment of the dispersion curve algorithm used for fluid-loading (complex wavenumber search); it needs to be changed only rarely
+- The primed notation and labeling of the shear horizontal modes, e.g., A'1, S'0, or B'2 is replaced by a more convenient ASH1, SSH0, BSH2 to help distinguish them from the Scholte modes; the latter are labeled AScholte0 etc.
+- The primed S'0/B'0 modes in coupled cases are now called S0/B1; the previous primed notation implicated that they were shear horizontal modes although these do not exist in coupled cases; the previous S0/B1 modes are now called S1/B2 and so forth
+- Multiple material lists can imported at once via "Materials" -> "Import" in the menu bar
+
+Bug fixes:
+- The dispersion curve tracing in the "Isotropic" and "Anisotropic" tabs stopped when the cut-off frequency of a mode was closer to the "Frequency limit" than the selected "Frequency step"
+- The S0 (now S1) Lamb wave mode for very stiff anisotropic materials such as Graphite could not be obtained because the initial phase velocity sweep was performed only up to 14 m/ms; it is extended to 25 m/ms
+
+DC v1.11.2 - September 13, 2021
+MATLAB Runtime R2020b (9.9)
+---------------------------
+Bug fixes:
+- Polar dispersion diagrams could not be calculated in v1.11.1 for symmetric layups in case there was only one repetition of the unit cell
+- Newly added isotropic materials could only be used in the "Isotropic" tab in the same session they were added; for use in all tabs, the DC had to be restarted
+
+DC v1.11.1 - July 1, 2021
+MATLAB Runtime R2020b (9.9)
+---------------------------
+New features:
+- When exporting raw data ((polar) dispersion curves, through-thickness profiles, signals), one can give a custom file name to the exported files (like possible only for exported plots in earlier releases); the automatically generated file name in earlier releases is now attached to the custom file name, e.g., "FILENAME_A_Lamb" or "FILENAME_Displacement_A0@11MHzmm", where 'FILENAME' is the string you define in the respective "File name" fields
+- In the "Material editor", the stiffness matrix components and the longitudinal and shear velocities of isotropic materials can be entered
+
+Bug fixes:
+- For a particular kind of specimen layup in the "Anisotropic" tab, the dispersion diagram could not be calculated (if the lowest layer was isotropic and the layup contained anisotropic layers with wave propagation along a principal direction (parallel and normal to the fibers in transversely isotropic and orthotropic media) AND it contained anisotropic layers with wave propagation OTHER than along a principal direction)
+- Multiple bugs fixed in the specimen setups in the "Anisotropic", "Polar diagrams", and "Laminate stiffness" tabs
+- Symmetric and antisymmetric modes are not anymore distinguished when the propagation direction is centered in nonsymmetric layups, like 40 deg in [0/80] or 45 deg in [0/45/90]; this caused problems in the dispersion curve tracing
+- In the "Anisotropic" and "Polar diagrams" tabs, the DC v1.11 tried to calculate the group velocity even if the dispersion curve tracing was stopped by pressing the "Stop" buttons
+- Choosing a frequency close to the cut-off frequency of a mode in the "Signal simulator" caused an error in coupled cases in v1.11
+- Dispersion curve raw data exported as a .mat-file in the "Anisotropic" tab were exported to the directory specified in the "Isotropic" tab
+- Signal raw data exported as a .mat-file in the "Signal simulator" were exported to the directory specified in the "Isotropic" tab
+- The 2-D and 3-D bulk wave group velocity plots in the "Elastic waves in bulk material" panel of the "Bulk waves" tab were incorrect; they are now in accordance with the advanced group velocity model introduced for guided waves ("Anisotropic" and "Polar diagrams" tabs) in v1.11
+- The 2-D bulk wave polarization and energy skew plots of orthotropic media in the 1-2-plane were incorrect
+
+DC v1.11 - April 26, 2021
+MATLAB Runtime R2020b (9.9)
+---------------------------
+New features:
+- Advanced model for the group velocity of guided waves in anisotropic specimens:
+    - In coupled cases, the group velocity direction is not aligned with the wave propagation direction; the group velocity calculated in earlier releases was only the cg1 component along the propagation direction x1; the group velocity vector indicates the actual direction of the ray along which the energy is transported
+    - In the "Anisotropic" tab in coupled cases, it is calculated the group velocity component in the propagation direction cg1, the normal component cg2, the group velocity magnitude cgAbs = sqrt(cg1^2+cg2^2), and the skew angle gamma, i.e., the angle between the group velocity and wave propagation directions
+    - The group velocity in decoupled cases, i.e., for any propagation direction in isotropic specimens and for propagation along and normal to the fibers in composites, remains the same as in earlier releases because the group velocity direction is aligned with the wave propagation direction, i.e., cg2 = 0, cgAbs = cg1, gamma = 0
+    - In the "Anisotropic" tab the propagation time is still calculated from the group velocity component cg1, namely t = distance/cg1; this is useful for scenarios like air-coupled ultrasonic inspection where you send a guided wave in a certain (wave propagation) direction, and detect the signal after propagating a certain distance in that direction
+    - With reference to the above, the signals simulated in the "Signal simulator" still correlate with the group velocity component cg1; the onsets of the wave packets appear as predicted by the propagation time dispersion diagram, which is calculated from cg1
+    - In the "Polar diagrams" tab, it is calculated the group velocity component cg1 vs the propagation direction (as in earlier releases), the group velocity magnitude cgAbs vs the ray angle (group velocity direction), and the skew angle vs the propagation direction
+    - In the "Polar diagrams" tab, it is calculated the propagation time along the wave propagation direction x1 vs the propagation direction, based on cg1 (as in earlier releases), and the propagation time vs the ray angle (group velocity direction), based on cgAbs
+    - The polar plot of cgAbs, also called wavecrest plot, shows how the guided waves generated by a point source advance outwards with time; the polar propagation time plot based on cgAbs gives the respective propagation time for travelling a certain distance; these plots are useful for scenarios like acoustical emission where an array of sensors is placed on a specimen to detected ultrasonic signals emitted from a point source
+    - In contrast, the polar plots of cg1 and the respective propagation time plots represent only the components along the wave propagation direction x1; this is useful for scenarios like air-coupled ultrasonic inspection where you send a guided wave in a certain (wave propagation) direction, and detect the signal after propagating a certain distance in that direction
+    - The topic is discussed in the newly introduced section 4 in the user's manual (press "Help" in the menu bar)
+- Raw data can be exported to MATLAB mat-files, in addition to Excel and txt-files
+- Material lists can be exported and imported; this is useful if you want to transfer custom materials to another DC installation
+- X-axis ticks and labels added to through-thickness plots: displacement in nm, stress in kPa, strain remains dimensionless, energy density in J/m^2, and power flow density in W/m; notice that these values correspond to guided waves carrying unit power flow in the propagation direction x1
+- Y-axis ticks and labels added to simulated signal plots: guided waves' displacement amplitudes (u3 for Lamb waves and u2 for SH waves) are in nanometers, in accordance with the through-thickness displacement plots
+- The "Show modes" and "Analyze" tools, which can be opened in the dispersion diagram figures, always stay in front
+- Improved error reports for unsuccessful plot and raw data export attempts
+- When a project is loaded, the previous DC instance is closed automatically, and a message appears that the project is loaded in a new DC instance
+
+Bug fixes:
+- The cut-off frequencies of shear horizontal modes in non-symmetric hybrid layups were detected incorrectly, resulting in piecewise dispersion curves
+- The through-thickness power flow density of the fundamental non-symmetric shear horizontal mode B'0 could not be plotted
+- Wrong raw data export of some through-thickness stress and strain components in the "Isotropic" tab
+- An error occurred when a mode very close to its cut-off frequency already fell below the neighboring lower mode of the same mode family; this seems to be possible only in non-symmetric layups
+- Axis label in wavenumber plots was "1/mm" although wavenumber is plotted in rad/mm (and rad for f-d products)
+- Small bug in the "Analyze" tool fixed
+- New materials could not be saved on Mac platforms since v1.8
+- Saved projects and specimens could not be opened on Mac platforms
+
+DC v1.10 - March 1, 2021
+MATLAB Runtime R2020b (9.9)
+---------------------------
+New features:
+- The "Signal simulator" accepts also anisotropic specimens
+- In the "Signal simulator", you can set the gate, determining the signal width for which the propagated spectral amplitude is calculated
+- Polar dispersion diagrams can be calculated for propagation angles ranging either from 0 to 180 deg or from 0 to 90 deg; the data are copied to the other two, respectively three, quadrants; notice that calculating only from 0 to 90 deg is insufficient for unit cells such as [0 45]
+- Users are not aware that after calculating the polar dispersion diagram(s), data are available not only at the "Frequency limit" but at each "Frequency step" from zero to "Frequency limit"; "Frequency" is now a drop-down menu where you can select the available data for plotting and exporting
+- The through-thickness profiles and modes shapes of the fundamental SH modes S'0/B'0 are available in the "Anisotropic" tab
+
+Bug fixes:
+- In the mode shape plots and animations ("Mode shape" panels), the in-plane and out-of-plane displacements did not have the right ratio with respect to each other
+- In the mode shape plots and animations ("Mode shape" panel) of the "Anisotropic" tab, the wave form was distorted in x1
+
+DC v1.9 - January 2, 2021
+MATLAB Runtime R2020b (9.9)
+---------------------------
+New features:
+- Hybrid laminates containing different materials can be calculated
+- Parallel computing can be enabled via the "Multicore" menu:
+    - Parallel computing of symmetric and antisymmetric modes in the "Isotropic" and "Anisotropic" tabs
+    - Dual core computing of polar dispersion diagrams in the "Polar diagrams" tab
+- Faster dispersion curve tracing for anisotropic specimens
+- More assistance on defining a layup properly, yielding better efficiency, robustness, and mode family determination:
+    - It is not possible anymore to define a unit cell containing only multiple layers with the same orientation (and same material), e.g., [0/0/0/0]; set up a single layer [0] with the total thickness instead; this will be the same because the DC assumes rigid bonding between the layers 
+    - It is not possible anymore to define a symmetric unit cell, e.g., [0/90/90/0] or [0/90/0]; cut the unit cell in half and check "Symmetric system" to obtain [0/90]s; if necessary, uncheck "Uniform layer thickness" and enter appropriate layer thicknesses manually
+- More precise through-thickness profiles for anisotropic specimen
+- Polar dispersion diagrams are always calculated for propagation angles ranging from 0 to 180 deg and copied from 180+x to 360 deg; calculating only from 0 to 90 deg and copying to the other three quadrants was not generally sufficient (evident by kinks at quadrant borders), and calculating the full 360 deg range in certain cases was unnecessary 
+- In dispersion diagrams, you can use the "Analyze" tool to display values at constant frequency, phase velocity, wavelength etc.
+- A separate list for cubic materials is available
+- All plots exported as pdf and png can be cropped tightly with minimal white space via the "Export settings" in each tab; this can also be achieved from the axes toolbar inside the plot figure
+- New MATLAB colormap "turbo" is used in the 3-D surfaces plots in the "Bulk waves" tab; "turbo" has more perceptually uniform transitions than the "jet" colormap used in earlier releases
+
+Bug fixes:
+- Triggering error messages in the "Signal simulator" (outside frequency range, odd number of samples per cycle) caused overlaying of multiple amplitude vs. propagation time plot axes inside the GUI
+- Choosing a frequency close to the cut-off frequency of a mode in the "Signal simulator" could cause an error
+- An error occurred in the "Signal simulator" in some instances while calculating the signal
+- Some noise occurred in the temporal and frequency responses in the "Signal simulator" occasionally
+- The "Show modes" tool inside the dispersion diagram plots of the "Anisotropic" tab did not work in v1.8
+- Through-thickness profiles and mode shapes for anisotropic specimens could not be plotted at some frequencies occasionally
+- Exported data from the "Polar diagrams" tab were delivered incorrectly in case the complete 360 deg range was calculated; the data from the first quadrant were copied to the other three quadrants, as it was intended only when one 90 deg quadrant needed to be calculated
+- Choosing a transversely isotropic material from the "Solid" drop-down menu in the "Bulk waves on interfaces" panel of the "Bulk waves" tab caused an error in v1.8
+
+DC v1.8 - October 3, 2020
+MATLAB Runtime R2019b (9.7)
+---------------------------
+New features:
+- The "Signal simulator" simulates the temporal and frequency responses of single and multiple guided wave modes after propagating a certain distance in an ISOTROPIC plate
+- Orthotropic materials with the full set of nine independent stiffness matrix components can be calculated; any higher symmetry material class can be entered as well (transversely isotropic, cubic, isotropic)
+- In the "2-D profiles" panel of the "Bulk waves" tab, one can select to plot the 1-3-plane or the 1-2-plane; this is useful for orthotropic materials where the modules E2 and E3 are not equal, unlike the case in transversely isotropic media
+- A sign convention is introduced to plot the through-thickness profiles in a consistent manner: the components u_1, sigma_11, and epsilon_11 at the top surface (top of the plot) are always positive (to the right)
+- The direction of the thickness axis in the through-thickness profiles is changed to pointing upward, and the top of the plate is at x3 = 0 instead of negative half thickness
+
+Bug fixes:
+- Pressing the "Stop" buttons did not stop dispersion curve tracing in v1.7
+- The dispersion curve tracing animation stopped at the next mode family when the animation window was inactive, e.g., when the user clicked into the GUI of the DC v1.7 during the animation
+
+DC v1.7 - June 3, 2020
+MATLAB Runtime R2019b (9.7)
+---------------------------
+New features:
+- No need to run the DC as administrator anymore
+- Faster dispersion curve tracing for isotropic materials
+- More robust dispersion curve tracing of symmetric and antisymmetric modes in coupled cases in transversely isotropic specimen
+- Symmetric and antisymmetric modes are distinguished in nonsymmetric layups if the propagation direction is centered, like 40 deg in [0/80] or 45 deg in [0/45/90]; this is the generalization of the feature introduced in v1.1, where the propagation direction was limited to 45 deg
+- The "Show modes" menu in the dispersion diagrams allows to show/hide dispersion curves in an easy way
+- As with MATLAB R2019b, the axes toolbar available in the plots has a tool to export tightly cropped pdf and png images; as usual, the axes toolbar becomes visible upon hovering the cursor over a plot
+- Improved behavior of the "Material editor" for saving and deleting materials
+- The through-thickness profiles are power normalized in accordance with DISPERSE, i.e., the power flow of the modes is unity; values of displacement, stress, strain, etc. can now be compared at different points on dispersion curves whereas in earlier releases, only their SHAPES could be compared
+- The through-thickness profile raw data can be exported to Excel/TXT-files
+- Export of dispersion curve raw data:
+    - Beside the default horizontal arrangement of the modes' data in the Excel/TXT-file, the modes can also be arranged vertically
+    - Frequency in kHz changed to frequency*thickness in MHz*mm
+
+Bug fixes:
+- In the power flow density through-thickness profiles of transversely isotropic specimen, the nonzero power flow density component P2 in coupled cases was missing
+- The "Solid" material drop-down menu in the "Bulk waves on interfaces" panel of the "Bulk waves" tab was not updated instantly when a new material was saved in the "Material editor"
+- The material drop-down menus disappeared when the last material was selected and any material was deleted from the corresponding list in the "Material editor"
+- Export of dispersion curve raw data: "Inf" and "-Inf" in the TXT-files and corresponding values in the Excel-files replaced by zeros
+- Usage of underscores in material names (like "material_name") caused erroneous string interpretation of the plot titles
+
+DC v1.6 - February 10, 2020
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- Wavenumber vs. frequency dispersion diagram
+- Coupling media can be defined in the "Material editor"
+
+Bug fixes:
+- Some problems with the export of dispersion curve raw data solved
+
+DC v1.5.1 - December 9, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+Bug fixes:
+- Wrong through-thickness profiles of fundamental modes in multilayered transversely isotropic specimens in v1.5
+- Gaps in the group velocity and energy deviation surfaces of slow shear waves plotted in the "3-D surfaces and vectors" panel of the "Bulk waves" tab
+
+DC v1.5 - November 12, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- Through-thickness profiles:
+    - Stress (three yet missing components added)
+    - Strain
+    - Strain energy density
+    - Kinetic energy density
+    - Total energy density
+    - Power flow density (Poynting vector)
+- Much faster calculation of mode shape animations
+
+Bug fixes:
+- The polar dispersion and laminate stiffness diagrams were incorrect for unit cells like [0/45] or [0/45/90] (exactly: if the sum of the unit cell was other than 0 or 90) because the data were calculated only from 0 to 90 deg and copied to the other quadrants; now the full 360 deg range is calculated if necessary
+- The changed propagation angle convention that was introduced with v1.4 (see below) was not applied to the polar dispersion and laminate stiffness diagrams
+
+DC v1.4 - September 2, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- Changed convention for the propagation angle in the "Transversely isotropic" tab: a positive pa results in a counterclockwise rotation of the wave propagation with respect to the layup, e.g., for [0/90/45/-45] with pa=10, the effective layup is [-10/80/35/-55]; prior to the DC v1.4, a clockwise rotation yielded [10/100/55/-35]
+- Dispersion diagrams:
+    - Wavelength vs. frequency
+    - Wavelength vs. propagation direction at a chosen frequency (polar diagram)
+    - Frequency vs. propagation time for a chosen propagation distance
+    - Propagation time vs. propagation direction for a chosen frequency and propagation distance (polar diagram)
+- Single dispersion curves can be removed in the diagrams; first left-click on a mode, then right-click and select "Hide"
+- The bulk waves' phase velocities can be plotted in phase and group velocity dispersion diagrams for isotropic materials and transversely isotropic monolayers
+- The bulk waves' group velocities can be calculated in the "Bulk waves" tab
+- The angle between the bulk waves' phase and group velocity (energy) vectors can be calculated in the "Bulk waves" tab
+- The calculation of 3-D bulk wave surfaces in the "Bulk waves" tab is twice as fast
+- Evanescent bulk waves appear in the 2-D and 3-D plots in the "Bulk waves on interfaces" panel of the "Bulk waves" tab
+- The bulk waves' phase velocities along and normal to the fibers in transversely isotropic materials are given in the "Material editor"
+- Click on a bulk wave in a bulk wave pattern plotted in the "through-thickness profiles" panels to display its phase velocity, wavelength, amplitude, and phase
+- A button is available to reset the plot layout settings to the default
+
+Bug fixes:
+- The tracing of the S'0 shear horizontal wave in transversely isotropic materials in the coupled case failed in some instances by hitting A0
+- If the higher order modes had been calculated, and then the "Higher order modes" check box unchecked to plot only the fundamental modes, the higher order modes were plotted anyway
+- If an export directory was defined in the "Export settings" panel of any tab, the same directory was adopted in all other tabs as well, while the displayed strings remained unchanged
+
+DC v1.3 - July 1, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- The slider on the lower left in the "Isotropic" tab can be used to shift the GUI up and down on screens that are too small for DC's GUI like the common 1366*768 notebook screen
+- Shear horizontal waves in isotropic materials are calculated by an explicit equation so that no time consuming curve tracing is necessary anymore
+- The displacement, stress, bulk wave pattern, and mode shape of the fundamental shear horizontal wave (S'0) in isotropic media can be calculated
+
+Bug fixes:
+- The mode designations in the bulk wave patterns shown in the "through-thickness profiles" panel of the "Transversely isotropic" tab were incorrect in the decoupled case; pure Lamb waves can consist of L and Sfast bulk waves or L and Sslow, pure SH modes can consist of Sfast or Sslow, depending on the propagation direction (0 or 90 deg)
+- The polarization vector of the L bulk wave was plotted incorrectly in the 3-D plot in the "Bulk wave generation and propagation" panel of the "Bulk waves" tab
+- The "Angle between propagation and polarization" of the quasilongitudinal bulk wave given in the output window of the "Bulk waves" tab was wrong for wave propagation in the Phi=90 deg plane; it must be 0 deg
+- The bulk wave pattern shown in the "through-thickness profiles" panel of the "Transversely isotropic" tab had a bug when the laminate was symmetric and its layer thicknesses not uniform
+- Dispersion curve tracing bug solved
+
+DC v1.2 - March 29, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- Faster dispersion curve tracing
+- The duration of a dispersion curve tracing is displayed in the completion message
+- The bulk wave pattern of guided waves can be plotted in the "through-thickness profiles" panel of the "Transversely isotropic" tab
+- The concept of "quasi shear vertical" and "quasi shear horizontal" bulk waves in transversely isotropic materials is replaced by "fast quasi shear" and "slow shear" waves
+- The polarization angle deviation surfaces of bulk waves in transversely isotropic materials can be calculated in the "Bulk waves" tab
+- The propagation and polarization vectors of bulk waves propagating along a specified direction in transversely isotropic materials can be plotted in the "Bulk waves" tab
+- Upon calculating the bulk wave surfaces in the "Bulk waves" tab their key data are displayed in the output window
+- The critical angles for the generation of propagating bulk waves through plane wave incidence in a chosen fluid-solid system are displayed in the output window of the "Bulk waves" tab 
+- Raw data export to csv-files replaced by export to txt-files
+- Improved appearance of the vector plots in the "Bulk waves" tab through insertion of arrow heads
+- Improved appearance of the bulk wave pattern plot in the "through-thickness profiles" panel of the "Isotropic" tab through insertion of arrow heads and polarization indicators
+- Improved listing of the higher order modes' cut-off frequencies in the output windows of the "Isotropic" and "Transversely isotropic" tabs
+- Transversely isotropic material SAERTEX7006919RIMR135 added 
+
+Bug fixes:
+- The tracing of the A0 Lamb wave in isotropic materials failed in some instances
+- The tracing of the S1 Lamb wave in transversely isotropic materials in the coupled case failed in some instances by hitting the S'0 shear horizontal mode
+- The "Angle between propagation and polarization" of the fast quasi shear wave given in the output window of the "Bulk waves" tab was wrong
+- Calculating only symmetric Lamb waves or symmetric or antisymmetric SH waves in a transversely isotropic material and trying to plot their group velocity resulted in an empty dispersion diagram
+- In group velocity dispersion diagrams of transversely isotropic materials the A0/B0 mode label did not appear in the decoupled case
+
+DC v1.1 - January 15, 2019
+MATLAB Runtime R2018b (9.5)
+---------------------------
+New features:
+- The "Bulk waves" tab allows calculation of the phase velocity and slowness surfaces as well as generation, propagation and polarization of bulk waves in isotropic and transversely isotropic materials
+- The bulk wave pattern of guided waves can be plotted in the "through-thickness profiles" panel of the "Isotropic" tab
+- Symmetric and antisymmetric modes are distinguished in non-symmetric layups, where the unit cell is symmetric to 45 deg, e.g., [0/30/60/90], and the wave propagation is along 45 deg 
+- Mode shape plot and animation are available for shear horizontal modes
+- The higher order mode detection is performed automatically
+- The available modes can be selected from drop-down lists to plot their displacement and stress field components as well as mode shapes
+- Raw data can be exported as csv-file
+- The "Help" button in the menu bar opens the Dispersion Calculator manual
+- As with MATLAB R2018b, the toolbar inside the plot windows has been moved to the top-right corner of the axes; it becomes visible upon hovering the cursor over the axes
+- The data tip tool is active by default and its text field improved
+- Transversely isotropic material T700M21 added
+
+Bug fixes:
+- Group velocity dispersion curves were not calculated properly at their cut-off frequency
+- The tracing of symmetric shear horizontal waves in transversely isotropic materials was unstable and the high-phase velocity part was missing in certain cases
+- Running a mode shape animation and switching to the "About" window or to the "Advanced" tab caused the animation to be displayed there
+- Specimen definitions and project files could only be loaded from C:\
+- Selecting an isotropic material in the "Material editor" tab caused the calculation of this one in the "Isotropic" tab if no explicit material selection was made there 
+
+DC v1.0 - November 6, 2018
+MATLAB Runtime R2018a (9.4)
+---------------------------
+Initial release
