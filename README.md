@@ -11,15 +11,14 @@ There are two ways of how to use DC.
 
 ### Installing DC as a stand-alone application (no MATLAB required)
 
-* Download DC_vXY_installer.exe.
-* Execute DC_vXY_installer.exe.
+* Download DC_v24_installer.exe.
+* Execute DC_v24_installer.exe.
 
 In case the MATLAB runtime is not downloaded and installed automatically:
 
-* Check ChangeLog.txt for the MATLAB runtime version.
-* Download the appropriate MATLAB runtime at https://www.mathworks.com/products/compiler/matlab-runtime.html
+* Download the MATLAB Runtime R2022a (9.12) at https://www.mathworks.com/products/compiler/matlab-runtime.html
 * Install the runtime.
-* Execute DC_vXY_installer.exe.
+* Execute DC_v24_installer.exe.
 
 ### Use the code in MATLAB (MATLAB and Curve Fitting Toolbox required)
 * Download the repository as a zip-file (click the green "Code" button, and press "Download ZIP").
@@ -41,13 +40,13 @@ This project is licensed under the GNU GPL v3 License - see LICENSE.md for detai
 
 ## Thanks to
 
-* Prof. Dr. Michael Lowe 
-* Prof. Dr. Michel Castaings 
-* Prof. Dr. Stanislav Rokhlin 
-* Prof. Dr. Marc Deschamps 
-* Dr. Eric Ducasse 
-* Prof. Dr. Victor Giurgiutiu
-* Prof. Dr. Markus Sause
+* Prof. Dr. Michael Lowe, Imperial College London, London, UK 
+* Prof. Dr. Michel Castaings, Institut Polytechnique de Bordeaux, Bordeaux, France
+* Prof. Dr. Stanislav Rokhlin, Ohio State University, Columbus, OH, USA
+* Prof. Dr. Marc Deschamps, University of Bordeaux, Bordeaux, France  
+* Dr. Eric Ducasse, University of Bordeaux, Bordeaux, France   
+* Prof. Dr. Victor Giurgiutiu, University of South Carolina, Columbia, SC, USA
+* Prof. Dr. Markus Sause, University of Augsburg, Augsburg, Germany
 
 ## Literature
 
