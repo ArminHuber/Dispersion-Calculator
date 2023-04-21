@@ -53,17 +53,17 @@ This project is licensed under the GNU GPL v3 License - see LICENSE.md for detai
 
 ### Books
 
-* J. L. Rose, Ultrasonic Waves in Solid Media. Cambridge University Press, Cambridge, 1999.
-* A. H. Nayfeh, Wave Propagation in Layered Anisotropic Media with Applications to Composites. North-Holland, Amsterdam, 1995.
-* S. I. Rokhlin, D. E. Chimenti and P. B. Nagy, Physical Ultrasonics of Composites. Oxford University Press, Oxford, 2011.
+* J. L. Rose, *Ultrasonic Waves in Solid Media* (Cambridge University Press, Cambridge, 1999).
+* A. H. Nayfeh, *Wave Propagation in Layered Anisotropic Media with Applications to Composites* (North-Holland, Amsterdam, 1995).
+* S. I. Rokhlin, D. E. Chimenti and P. B. Nagy, *Physical Ultrasonics of Composites* (Oxford University Press, Oxford, 2011).
 
 ### Journal articles
 
-* S. I. Rokhlin and L. Wang, Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method, J. Acoust. Soc. Am., vol. 112, pp. 822-834, 2002.
-* L. Wang and S. I. Rokhlin, Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media, Ultrasonics, vol. 39, pp. 413-424, 2001.
-* V. G. A. Kamal and V. Giurgiutiu, Stiffness Transfer Matrix Method (STMM) for Stable Dispersion Curves Solution in Anisotropic Composites, in Proc. SPIE, 2014.
-* A. M. A. Huber and M. G. R. Sause, Classification of solutions for guided waves in anisotropic composites with large numbers of layers, J. Acoust. Soc. Am., vol. 144, pp. 3236-3251, 2018.
+* S. I. Rokhlin and L. Wang, "Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method", J. Acoust. Soc. Am. **112**(3), 822-834 (2002). https://doi.org/10.1121/1.1497365
+* L. Wang and S. I. Rokhlin, "Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media", Ultrasonics **39**, 413-424 (2001). https://doi.org/10.1016/S0041-624X(01)00082-8
+* V. G. A. Kamal and V. Giurgiutiu, "Stiffness transfer matrix method (STMM) for stable dispersion curves solution in anisotropic composites", Proc. SPIE **9064** (2014).
+* A. M. A. Huber and M. G. R. Sause, "Classification of solutions for guided waves in anisotropic composites with large numbers of layers", J. Acoust. Soc. Am. **144**(6), 3236-3251 (2018). https://doi.org/10.1121/1.5082299
 
 ### PhD thesis
 
-* A. M. A. Huber, Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection. University of Augsburg, Augsburg, 2020. https://elib.dlr.de/139819
+* A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* (University of Augsburg, Augsburg, 2020). https://elib.dlr.de/139819
