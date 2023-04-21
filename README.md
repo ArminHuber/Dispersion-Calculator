@@ -14,7 +14,7 @@ There are two ways of how to use DC.
 * Download DC_v24_installer.exe.
 * Execute DC_v24_installer.exe.
 
-In case the MATLAB runtime is not downloaded and installed automatically:
+In case the MATLAB Runtime is not downloaded and installed automatically:
 
 * Download the MATLAB Runtime R2022a (9.12) at https://www.mathworks.com/products/compiler/matlab-runtime.html
 * Install the runtime.
