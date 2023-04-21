@@ -66,4 +66,4 @@ This project is licensed under the GNU GPL v3 License - see LICENSE.md for detai
 
 ### PhD thesis
 
-* A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* (University of Augsburg, Augsburg, 2020). https://elib.dlr.de/139819
+* A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* (University of Augsburg, Augsburg, 2020). https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2021/docId/82760
