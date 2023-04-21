@@ -41,7 +41,7 @@ This project is licensed under the GNU GPL v3 License - see LICENSE.md for detai
 ## Thanks to
 
 * Prof. Dr. Michael Lowe, Imperial College London, London, UK 
-* Prof. Dr. Michel Castaings, Institut Polytechnique de Bordeaux, Bordeaux, France
+* Prof. Dr. Michel Castaings, University of Bordeaux, Bordeaux, France
 * Prof. Dr. Stanislav Rokhlin, Ohio State University, Columbus, OH, USA
 * Prof. Dr. Marc Deschamps, University of Bordeaux, Bordeaux, France  
 * Dr. Eric Ducasse, University of Bordeaux, Bordeaux, France   
