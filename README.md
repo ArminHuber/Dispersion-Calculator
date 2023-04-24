@@ -1,21 +1,17 @@
 # Dispersion Calculator v2.4
-
 Calculate guided wave dispersion diagrams for flat isotropic plates and multilayered anisotropic laminates.
 
 ## Description
 The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in flat isotropic plates and multilayered anisotropic laminates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic specimens. DC uses the Rayleigh-Lamb equations and the stiffness matrix method (SMM) developed by S. I. Rokhlin and L. Wang (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.imperial.ac.uk/non-destructive-evaluation/products-and-services/disperse/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/files/11271206/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/files/11271208/DispersionCalculator_Manual.pdf).
 
 ## Download and usage
-
 There are two ways of how to use DC.
 
 ### Install DC as a stand-alone application (no MATLAB required)
-
 * Download DC_v24_installer.exe.
 * Execute DC_v24_installer.exe.
 
 In case the MATLAB Runtime is not downloaded and installed automatically:
-
 * Download the [MATLAB Runtime R2022a (9.12)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
 * Install the runtime.
 * Execute DC_v24_installer.exe.
@@ -28,19 +24,15 @@ In case the MATLAB Runtime is not downloaded and installed automatically:
 * Open and run DispersionCalculator.m.
 
 ## Author
-
 Dr. Armin Huber, armin.huber@dlr.de
 
 ## Version history
-
 See ChangeLog.txt.
 
 ## License
-
 This project is licensed under the GNU GPL v3 License - see LICENSE.md for details.
 
 ## Thanks to
-
 * Prof. Dr. Michael Lowe, Imperial College London, London, UK 
 * Prof. Dr. Michel Castaings, University of Bordeaux, Bordeaux, France
 * Prof. Dr. Stanislav Rokhlin, Ohio State University, Columbus, OH, USA
@@ -52,18 +44,15 @@ This project is licensed under the GNU GPL v3 License - see LICENSE.md for detai
 ## Literature
 
 ### Books
-
 * J. L. Rose, *Ultrasonic Waves in Solid Media* (Cambridge University Press, Cambridge, 1999).
 * A. H. Nayfeh, *Wave Propagation in Layered Anisotropic Media with Applications to Composites* (North-Holland, Amsterdam, 1995).
 * S. I. Rokhlin, D. E. Chimenti and P. B. Nagy, *Physical Ultrasonics of Composites* (Oxford University Press, Oxford, 2011).
 
 ### Journal articles
-
 * S. I. Rokhlin and L. Wang, "Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method", [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.1497365) **112**(3), 822-834 (2002).
 * L. Wang and S. I. Rokhlin, "Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media", [Ultrasonics](https://doi.org/10.1016/S0041-624X(01)00082-8) **39**, 413-424 (2001).
 * V. G. A. Kamal and V. Giurgiutiu, "Stiffness transfer matrix method (STMM) for stable dispersion curves solution in anisotropic composites", Proc. SPIE **9064** (2014).
 * A. M. A. Huber and M. G. R. Sause, "Classification of solutions for guided waves in anisotropic composites with large numbers of layers", [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.5082299) **144**(6), 3236-3251 (2018).
 
 ### PhD thesis
-
 * A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* ([University of Augsburg](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2021/docId/82760), Augsburg, 2020).
