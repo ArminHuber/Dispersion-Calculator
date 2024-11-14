@@ -14,7 +14,7 @@ There are two ways of how to use DC.
 In case the MATLAB Runtime is not downloaded and installed automatically:
 * Download the [MATLAB Runtime R2024b (24.2)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
 * Install the runtime.
-* Execute `DC_v30_installer.exe`.
+* Execute `DC_v30_Installer.exe`.
 
 ### Use the code (MATLAB R2024b or later and Curve Fitting Toolbox required)
 * Download the repository as a zip-file (click the green "Code" button, and press "Download ZIP").
