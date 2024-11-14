@@ -8,8 +8,8 @@ The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Ca
 There are two ways of how to use DC.
 
 ### Install DC as a stand-alone application (no MATLAB required)
-* Download `DC_v30_installer.exe`.
-* Execute `DC_v30_installer.exe`.
+* Download `DC_v30_Installer.exe`.
+* Execute `DC_v30_Installer.exe`.
 
 In case the MATLAB Runtime is not downloaded and installed automatically:
 * Download the [MATLAB Runtime R2024b (24.2)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
