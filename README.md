@@ -1,4 +1,4 @@
-# Dispersion Calculator v2.4
+# Dispersion Calculator v3.0
 Calculate guided wave dispersion diagrams for flat isotropic plates and multilayered anisotropic laminates.
 
 ## Description
