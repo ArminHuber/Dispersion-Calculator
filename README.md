@@ -5,7 +5,10 @@ Calculate guided wave dispersion diagrams for isotropic plates, rods, and pipes 
 The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in isotropic plates, rods, and pipes as well as multilayered anisotropic laminates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic specimens. DC uses the Rayleigh-Lamb equations for isotropic plates, the corresponding equations for cylindrical waveguides, and the stiffness matrix method (SMM) developed by S. I. Rokhlin and L. Wang (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.imperial.ac.uk/non-destructive-evaluation/products-and-services/disperse/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DC_MATLAB_Code/DispersionCalculator_Manual.pdf).
 
 ## Download and usage
-There are two ways of how to use DC.
+There are two ways of how to use DC. Go to the `Releases` section on the right. 
+
+![grafik](https://github.com/user-attachments/assets/1be1943b-6c57-4454-9cbf-43cc11d9b4f7)
+
 
 ### Install DC as a stand-alone application (no MATLAB required)
 * Download `DC_v30_Installer.exe`.
@@ -19,6 +22,8 @@ In case the MATLAB Runtime is not downloaded and installed automatically:
 ### Use the code (MATLAB R2024b or later and Curve Fitting Toolbox required)
 * Download the repository as a zip-file (click the green "Code" button, and press "Download ZIP").
 ![How2Zip](https://user-images.githubusercontent.com/43004587/233652016-bac68843-56c9-4dac-9b9c-857db6974fa3.png)
+![e](![grafik](https://github.com/user-attachments/assets/0dd7e869-3225-457f-a672-2f20ae78c53e)
+
 * Copy the `DC_MATLAB_Code` folder to your MATLAB working directory.
 * In MATLAB, add the `DC_MATLAB_Code` folder to the MATLAB path (right-click on the folder -> Add to Path -> Selected Folders and Subfolders).
 * Open and run `DispersionCalculator.m`.
