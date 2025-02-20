@@ -4,7 +4,7 @@ Calculate guided wave dispersion diagrams for isotropic plates, rods, and pipes 
 ## Description
 The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in isotropic plates, rods, and pipes as well as multilayered anisotropic laminates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic specimens. DC uses the Rayleigh-Lamb equations for isotropic plates, the corresponding equations for isotropic cylindrical waveguides, and the stiffness matrix method (SMM) for multilayered anisotropic plates (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.imperial.ac.uk/non-destructive-evaluation/products-and-services/disperse/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DC_MATLAB_Code/DispersionCalculator_Manual.pdf).
 
-## Download and usage
+## Download and installation
 There are two ways of how to use DC. In the `Releases` section on the right, click on `Dispersion Calculator v3.0`. Here you can 
 * download `DC_v30_Installer.exe` to install DC as a stand-alone.
 * download `Source code` to use the code in MATLAB.
