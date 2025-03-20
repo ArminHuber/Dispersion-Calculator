@@ -57,6 +57,7 @@ This project is licensed under the MIT License - see `LICENSE` for details.
 * L. Wang and S. I. Rokhlin, "Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media," [Ultrasonics](https://doi.org/10.1016/S0041-624X(01)00082-8) **39**, 413-424 (2001).
 * A. H. Nayfeh, "The general problem of elastic wave propagation in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.400988) **89**(4), 1521–1531 (1991).
 * A. H. Nayfeh, "The propagation of horizontally polarized shear waves in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.398580) **86**(5), 2007–2012 (1989).
+* R. Kumar, "Flexural Vibrations of Fluid-Filled Circular Cylindrical Shells," Acta Acust. **24**, 137–146 (1971).
 
 ### PhD thesis
 * A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* ([University of Augsburg](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2021/docId/82760), Augsburg, 2020).
