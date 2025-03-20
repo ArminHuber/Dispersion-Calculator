@@ -1,0 +1,9 @@
+1A Run "DC_v31_Installer.exe"
+2A Enjoy DC
+
+In case the MATLAB Runtime is not downloaded and installed automatically:
+
+1B Download the MATLAB Runtime R2024b (24.2) at https://www.mathworks.com/products/compiler/matlab-runtime.html
+2B Install the runtime
+3B Run "DC_v31_Installer.exe"
+4B Enjoy DC
