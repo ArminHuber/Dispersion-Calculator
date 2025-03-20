@@ -1,0 +1,6 @@
+DC v3.1 requirements:
+- MATLAB R2024b
+- Curve Fitting Toolbox
+
+Optional:
+- Parallel Computing Toolbox (for enabling multi-core computing)
