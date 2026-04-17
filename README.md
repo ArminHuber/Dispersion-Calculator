@@ -5,20 +5,20 @@ Calculate guided wave dispersion diagrams for isotropic plates, rods, and pipes 
 The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in isotropic plates, rods, and pipes as well as multilayered anisotropic laminates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic specimens. DC uses the Rayleigh-Lamb equations for isotropic plates, the corresponding equations for isotropic cylindrical waveguides, and the stiffness matrix method (SMM) combined with the transfer matrix method (TMM) for multilayered anisotropic plates (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.imperial.ac.uk/non-destructive-evaluation/products-and-services/disperse/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DC_MATLAB_Code/DispersionCalculator_Manual.pdf).
 
 ## Download and installation
-There are two ways of how to use DC. In the `Releases` section on the right, click on `Dispersion Calculator v3.1`. Here you can 
-* download `DC_v31_Installer.exe` to install DC as a stand-alone.
+There are two ways of how to use DC. In the `Releases` section on the right, click on `Dispersion Calculator v3.2`. Here you can 
+* download `DC_v32_Installer.exe` to install DC as a stand-alone.
 * download `Source code` to use the code in MATLAB.
 
 ### Install DC as a stand-alone application (no MATLAB required)
-* Download `DC_v31_Installer.exe`.
-* Execute `DC_v31_Installer.exe`.
+* Download `DC_v32_Installer.exe`.
+* Execute `DC_v32_Installer.exe`.
 
 In case the MATLAB Runtime is not downloaded and installed automatically:
-* Download the [MATLAB Runtime R2024b (24.2)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
+* Download the [MATLAB Runtime R2026a (26.1)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
 * Install the runtime.
-* Execute `DC_v31_Installer.exe`.
+* Execute `DC_v32_Installer.exe`.
 
-### Use the code (MATLAB R2024b or later and Curve Fitting Toolbox required)
+### Use the code (MATLAB R2026a or later and Curve Fitting Toolbox required)
 * Download `Source code`.
 * Copy the `DC_MATLAB_Code` folder to your MATLAB working directory.
 * In MATLAB, add the `DC_MATLAB_Code` folder to the MATLAB path (right-click on the folder -> Add to Path -> Selected Folders and Subfolders).
