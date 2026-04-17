@@ -1,0 +1,4 @@
+air 1.2 343
+dieselOil 800 1250
+olympusWedge 1180 2720
+water 1000 1500
