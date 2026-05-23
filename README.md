@@ -50,6 +50,7 @@ This project is licensed under the MIT License - see `LICENSE` for details.
 * A. H. Nayfeh, *Wave Propagation in Layered Anisotropic Media with Applications to Composites* (North-Holland, Amsterdam, 1995).
 
 ### Journal articles
+* S. Guo et al., "Guided waves propagation in arbitrarily stacked composite laminates: Between-layers incompatibility issue resolution using hybrid matrix strategy," [Compos. Struct.](https://doi.org/10.1016/j.compstruct.2023.117360) **322**, (2023).
 * A. M. A. Huber, "Classification of solutions for guided waves in fluid-loaded viscoelastic composites with large numbers of layers," [J. Acoust. Soc. Am.](https://doi.org/10.1121/10.0020584) **154**(2), 1073–1094 (2023).
 * A. M. A. Huber and M. G. R. Sause, "Classification of solutions for guided waves in anisotropic composites with large numbers of layers," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.5082299) **144**(6), 3236-3251 (2018).
 * V. G. A. Kamal and V. Giurgiutiu, "Stiffness transfer matrix method (STMM) for stable dispersion curves solution in anisotropic composites," Proc. SPIE **9064** (2014).
