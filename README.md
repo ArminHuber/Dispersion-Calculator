@@ -31,7 +31,7 @@ Dr. Armin Huber, armin.huber@dlr.de
 See [ChangeLog.txt](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/ChangeLog.txt).
 
 ## License
-This project is licensed under the MIT License - see `LICENSE` for details.
+This project is licensed under the MIT License - see [LICENSE](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/LICENSE) for details.
 
 ## Thanks to
 * Prof. Dr. Michael Lowe, Imperial College London, London, UK 
