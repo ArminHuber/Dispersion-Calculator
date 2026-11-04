@@ -14,7 +14,7 @@ There are two ways of how to use DC. In the `Releases` section on the right, cli
 * Execute `DC_v33_Installer.exe`.
 
 In case the MATLAB Runtime is not downloaded and installed automatically:
-* Download the [MATLAB Runtime R2026a (26.1)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
+* Download [MATLAB Runtime R2026a (26.1)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
 * Install the runtime.
 * Execute `DC_v33_Installer.exe`.
 
