@@ -2,14 +2,14 @@
 Calculate guided wave dispersion diagrams for multilayered isotropic plates, rods, and pipes as well as for multilayered anisotropic plates.
 
 ## Description
-The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in isotropic plates, rods, and pipes as well as multilayered anisotropic laminates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic specimens. DC uses the Rayleigh-Lamb equations for isotropic plates, the corresponding equations for isotropic cylindrical waveguides, and the stiffness matrix method (SMM) combined with the transfer matrix method (TMM) for multilayered anisotropic plates (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.disperse.software/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DC_MATLAB_Code/DispersionCalculator_Manual.pdf).
+The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Calculator (DC) is an interactive software for calculating the phase velocity, energy velocity, and attenuation dispersion as well as mode shapes of guided waves in multilayered isotropic plates, rods, and pipes as well as in multilayered anisotropic plates. Fluid-loading and viscoelasticity can be considered. Polar dispersion diagrams can be calculated for anisotropic plates. DC uses the Rayleigh-Lamb equations for single layer isotropic plates, the corresponding equations for isotropic cylindrical waveguides, and the stiffness matrix method (SMM) combined with the transfer matrix method (TMM) for multilayered plates, rods, and pipes (see literature below). DC is continuously improved and validated by using [DISPERSE](https://www.disperse.software/). DC was first released in 2018, and is used worldwide today. For more information, read [DispersionCalculator_Description.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DispersionCalculator_Description.pdf) and [DispersionCalculator_Manual.pdf](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/DC_MATLAB_Code/DispersionCalculator_Manual.pdf).
 
 ## Download and installation
 There are two ways of how to use DC. In the `Releases` section on the right, click on `Dispersion Calculator v3.3`. Here you can 
-* download `DC_v33_Installer.exe` to install DC as a stand-alone.
+* download `DC_v33_Installer.exe` for Windows to install DC as a stand-alone.
 * download `Source code` to use the code in MATLAB.
 
-### Install DC as a stand-alone application (no MATLAB required)
+### Install DC as a stand-alone application on Windows (no MATLAB required)
 * Download `DC_v33_Installer.exe`.
 * Execute `DC_v33_Installer.exe`.
 
@@ -41,6 +41,9 @@ This project is licensed under the MIT License - see `LICENSE` for details.
 * Dr. Eric Ducasse, University of Bordeaux, Bordeaux, France   
 * Prof. Dr. Victor Giurgiutiu, University of South Carolina, Columbia, SC, USA
 * Prof. Dr. Markus Sause, University of Augsburg, Augsburg, Germany
+
+## Dedication
+Dispersion Calculator is dedicated to<br><br>&emsp;&emsp;&emsp;&ensp;&ensp;Sir Patrick Stewart
 
 ## Literature
 
