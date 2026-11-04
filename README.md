@@ -21,7 +21,7 @@ In case the MATLAB Runtime is not downloaded and installed automatically:
 ### Use the code (MATLAB R2026a or later and Curve Fitting Toolbox required)
 * Download `Source code`.
 * Copy the `DC_MATLAB_Code` folder to your MATLAB working directory.
-* In MATLAB, add the `DC_MATLAB_Code` folder to the MATLAB path (right-click on the folder -> Add to Path -> Selected Folders and Subfolders).
+* In MATLAB, add the `DC_MATLAB_Code` folder to the MATLAB path (right-click on the folder &rarr; Add to Path &rarr; Selected Folders and Subfolders).
 * Open and run `DispersionCalculator.m`.
 
 ## Author
