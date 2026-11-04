@@ -28,7 +28,7 @@ In case the MATLAB Runtime is not downloaded and installed automatically:
 Dr. Armin Huber, armin.huber@dlr.de
 
 ## Version history
-See `ChangeLog.txt`.
+See [ChangeLog.txt](https://github.com/ArminHuber/Dispersion-Calculator/blob/main/ChangeLog.txt).
 
 ## License
 This project is licensed under the MIT License - see `LICENSE` for details.
