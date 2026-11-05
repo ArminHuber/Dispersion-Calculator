@@ -64,6 +64,8 @@ Dispersion Calculator is dedicated to<br><br>&emsp;&emsp;&emsp;&ensp;&ensp;Sir P
 * A. H. Nayfeh, "The general problem of elastic wave propagation in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.400988) **89**(4), 1521–1531 (1991).
 * A. H. Nayfeh, "The propagation of horizontally polarized shear waves in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.398580) **86**(5), 2007–2012 (1989).
 * R. Kumar, "Flexural Vibrations of Fluid-Filled Circular Cylindrical Shells," Acta Acust. **24**, 137–146 (1971).
+* Y.-H. Pao and R. D. Mindlin, "Dispersion of Flexural Waves in an Elastic, Circular Cylinder," [J. Appl. Mech.](https://doi.org/10.1115/1.3644033) **27**(3), 513-520 (1960).
+* D. Gazis, "Three‐Dimensional Investigation of the Propagation of Waves in Hollow Circular Cylinders. I. Analytical Foundation," [J. Acoust. Soc. Am.]( https://doi.org/10.1121/1.1907753) **31**(5), 568–573 (1959).
 
 ### PhD thesis
 * A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* ([University of Augsburg](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2021/docId/82760), Augsburg, 2020).
