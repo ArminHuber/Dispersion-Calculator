@@ -57,8 +57,10 @@ Dispersion Calculator is dedicated to<br><br>&emsp;&emsp;&emsp;&ensp;&ensp;Sir P
 * A. M. A. Huber, "Classification of solutions for guided waves in fluid-loaded viscoelastic composites with large numbers of layers," [J. Acoust. Soc. Am.](https://doi.org/10.1121/10.0020584) **154**(2), 1073–1094 (2023).
 * A. M. A. Huber and M. G. R. Sause, "Classification of solutions for guided waves in anisotropic composites with large numbers of layers," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.5082299) **144**(6), 3236-3251 (2018).
 * V. G. A. Kamal and V. Giurgiutiu, "Stiffness transfer matrix method (STMM) for stable dispersion curves solution in anisotropic composites," Proc. SPIE **9064** (2014).
+* X. Zhao and J. L. Rose, "Guided circumferential shear horizontal waves in an isotropic hollow cylinder," [J. Acoust. Soc. Am.]( https://doi.org/10.1121/1.1691037) **115**(5), 1912-1916 (2004).
 * S. I. Rokhlin and L. Wang, "Stable recursive algorithm for elastic wave propagation in layered anisotropic media: Stiffness matrix method," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.1497365) **112**(3), 822-834 (2002).
 * L. Wang and S. I. Rokhlin, "Stable reformulation of transfer matrix method for wave propagation in layered anisotropic media," [Ultrasonics](https://doi.org/10.1016/S0041-624X(01)00082-8) **39**, 413-424 (2001).
+* G. Liu and J. Qu, "Guided Circumferential Waves in a Circular Annulus," [J. Appl. Mech.](https://doi.org/10.1115/1.2789071) **65**(2), 424-430 (1998).
 * A. H. Nayfeh, "The general problem of elastic wave propagation in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.400988) **89**(4), 1521–1531 (1991).
 * A. H. Nayfeh, "The propagation of horizontally polarized shear waves in multilayered anisotropic media," [J. Acoust. Soc. Am.](https://doi.org/10.1121/1.398580) **86**(5), 2007–2012 (1989).
 * R. Kumar, "Flexural Vibrations of Fluid-Filled Circular Cylindrical Shells," Acta Acust. **24**, 137–146 (1971).
