@@ -6,8 +6,8 @@ The [MATLAB](https://www.mathworks.com/products/matlab.html)-based Dispersion Ca
 
 ## Download and installation
 There are two ways of how to use DC. In the `Releases` section on the right, click on `Dispersion Calculator v3.3`. Here you can 
-* download `DC_v33_Installer.exe` for Windows to install DC as a stand-alone.
-* download `Source code` to use the code in MATLAB.
+* Download `DC_v33_Installer.exe` for Windows to install DC as a stand-alone.
+* Download `Source code` to use the code in MATLAB.
 
 ### Install DC as a stand-alone application on Windows (no MATLAB required)
 * Download `DC_v33_Installer.exe`.
