@@ -51,6 +51,8 @@ Dispersion Calculator is dedicated to<br><br>&emsp;&emsp;&emsp;&ensp;&ensp;Sir P
 * S. I. Rokhlin, D. E. Chimenti and P. B. Nagy, *Physical Ultrasonics of Composites* (Oxford University Press, Oxford, 2011).
 * J. L. Rose, *Ultrasonic Waves in Solid Media* (Cambridge University Press, Cambridge, 1999).
 * A. H. Nayfeh, *Wave Propagation in Layered Anisotropic Media with Applications to Composites* (North-Holland, Amsterdam, 1995).
+* B. A. Auld, *Acoustic Fields and Waves in Solids* (Krieger, Malabar, 1990).
+* J. D. Achenbach, *Wave Propagation in Elastic Solids* (North-Holland, Amsterdam, 1973). 
 
 ### Journal articles
 * S. Guo et al., "Guided waves propagation in arbitrarily stacked composite laminates: Between-layers incompatibility issue resolution using hybrid matrix strategy," [Compos. Struct.](https://doi.org/10.1016/j.compstruct.2023.117360) **322**, (2023).
