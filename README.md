@@ -1,4 +1,4 @@
-# Dispersion Calculator v3.3 [![DOI](https://zenodo.org/badge/629601478.svg)](https://doi.org/10.5281/zenodo.23983280)
+# Dispersion Calculator v3.3 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23983280.svg)](https://doi.org/10.5281/zenodo.23983280)
 Calculate guided wave dispersion diagrams for multilayered isotropic plates, rods, and pipes as well as for multilayered anisotropic plates.
 
 ## Description
