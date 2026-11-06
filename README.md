@@ -69,5 +69,5 @@ Dispersion Calculator is dedicated to<br><br>&emsp;&emsp;&emsp;&ensp;&ensp;Sir P
 * Y.-H. Pao and R. D. Mindlin, "Dispersion of Flexural Waves in an Elastic, Circular Cylinder," [J. Appl. Mech.](https://doi.org/10.1115/1.3644033) **27**(3), 513-520 (1960).
 * D. Gazis, "Three‐Dimensional Investigation of the Propagation of Waves in Hollow Circular Cylinders. I. Analytical Foundation," [J. Acoust. Soc. Am.]( https://doi.org/10.1121/1.1907753) **31**(5), 568–573 (1959).
 
-### PhD thesis
+### Doctoral thesis
 * A. M. A. Huber, *Numerical Modeling of Guided Waves in Anisotropic Composites with Application to Air-coupled Ultrasonic Inspection* ([University of Augsburg](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2021/docId/82760), Augsburg, 2020).
